@@ -11,7 +11,7 @@ function clear() {
 
 var person ={
     name: 'Mick',
-    turns:10
+    turns:5
 }
 var panda = {
     name: 'Walking Panda',
@@ -52,9 +52,8 @@ rl.on('line', function(input){
 
 
 
-    killerPanda = Math.floor(Math.random() * 4 + 1);
-    console.log(killerPanda)
-    if(input === killerPanda){
+    var killerPanda = Math.floor(Math.random() * 4 + 1);
+    if(input === killerPanda.toString()){
         console.log('Surprise!!! The Panda has you!!! Prepare to be PANDERIZED')
         rl.close();
     }
@@ -62,7 +61,7 @@ rl.on('line', function(input){
         console.log('You made it out of the zoo alive!!!')
         rl.close();
     }else{
-        rl.setPrompt(`North | East | South | West`);
+        rl.setPrompt(`North | East | South | West\n`);
         rl.prompt();
     }
 });
