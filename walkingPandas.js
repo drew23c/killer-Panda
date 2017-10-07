@@ -54,10 +54,12 @@ rl.on('line', function(input){
 
     var killerPanda = Math.floor(Math.random() * 4 + 1);
     if(input === killerPanda.toString()){
+        clear();
         console.log('Surprise!!! The Panda has you!!! Prepare to be PANDERIZED')
         rl.close();
     }
    else if(person.turns === 0){
+       rl.clear();
         console.log('You made it out of the zoo alive!!!')
         rl.close();
     }else{
