@@ -59,7 +59,7 @@ rl.on('line', function(input){
         rl.close();
     }
    else if(person.turns === 0){
-       rl.clear();
+       clear();
         console.log('You made it out of the zoo alive!!!')
         rl.close();
     }else{
