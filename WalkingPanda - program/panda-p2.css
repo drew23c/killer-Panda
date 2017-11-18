@@ -1,0 +1,48 @@
+*{
+    text-align: center;
+}
+body{
+    background-color:black;
+    color:white;
+    font-size:40px;
+    font-family: 'Creepster', cursive;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    color:white;
+}
+@keyframes zoom{
+    0%{
+        width:0%;
+        height:0%;
+    }
+    25%{
+        width:25%;
+        height:25%;
+    }
+    50%{
+        width:50%;
+        height:50%;
+    }
+    75%{
+        width:25%;
+        height:25%;
+    }
+    100%{
+        width:0%;
+        height:0%;
+    }
+}
+.hide{
+    display:none;
+}
+img{
+    margin-left:-25%;
+    border-radius: 25%;
+    animation-name: zoom;
+    animation-duration: .2s;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
