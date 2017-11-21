@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     var e = document.querySelector('#e');
     var w = document.querySelector('#w');
     var p = document.querySelector('p');
-    var l = document.querySelector('img');
+    var l = document.querySelector('#scary-panda');
+    var v = document.querySelector('#victory-dance');
     var pCount = Number(document.getElementById('#count'))
     var pCount = 5;
     document.addEventListener('click',(event) =>{    
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () =>{
                     l.classList.remove('hide')
                 }
                 if(pCount === 0){
-                    p.innerText = 'You made it out alive!!'            
+                    p.innerText = 'You made it out alive!!'
+                    v.classList.remove('hide-victory');                    
                 }
         }
         else if(event.target === s){
@@ -39,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () =>{
                     l.classList.remove('hide')                    
                 }
                 if(pCount === 0){
-                    p.innerText = 'You made it out alive!!'            
+                    p.innerText = 'You made it out alive!!'  
+                    v.classList.remove('hide-victory');                    
                 }
         }
         else if(event.target === e){
@@ -51,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () =>{
                     l.classList.remove('hide')                    
                 }
                 if(pCount === 0){
-                    p.innerText = 'You made it out alive!!'            
+                    p.innerText = 'You made it out alive!!'
+                    v.classList.remove('hide-victory');                                        
                 }
         }
         else if(event.target === w){
@@ -63,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () =>{
                     l.classList.remove('hide')                    
                 }
                 if(pCount === 0){
-                    p.innerText = 'You made it out alive!!'            
+                    p.innerText = 'You made it out alive!!'
+                    v.classList.remove('hide-victory');                                        
                 }
         }
     })

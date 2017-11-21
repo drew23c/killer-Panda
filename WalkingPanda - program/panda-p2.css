@@ -38,11 +38,18 @@ a:hover{
 .hide{
     display:none;
 }
-img{
+#scary-panda{
     margin-left:-25%;
     border-radius: 25%;
     animation-name: zoom;
     animation-duration: .2s;
     animation-iteration-count: infinite;
     position: absolute;
+}
+.hide-victory{
+    display:none;
+}
+#victory-dance{
+    height:30%;
+    width:30%;
 }
