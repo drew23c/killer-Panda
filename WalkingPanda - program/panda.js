@@ -11,16 +11,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     var arr = [n,s,e,w]
     document.addEventListener('click',(event) =>{    
         pCount -= 1
-        for(var i = 0; i < array.length; i++){ 
-            var random = Math.floor(Math.random() * array[i])                
-            
-            if(random === panda){
-                p.innerText = 'You\'ve been caught!!'
-            }                        
-        }
-
         if(event.target === n){
-            console.log(event.target, arr[Math.floor(Math.random() * 4)])
+            console.log('North')
                 p.innerText = 'Be careful, do not make any noise...' + '\n' + pCount + ' turns left';
                 if(n === arr[Math.floor(Math.random() * 4)]){
                     p.innerText = 'You\'ve been caught!!'
@@ -33,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () =>{
                 }
         }
         else if(event.target === s){
-            console.log(event.target, arr[Math.floor(Math.random() * 4)])            
             console.log('South')
                 p.innerText = 'You\'re sneaking past the next cage, be careful...' + '\n' + pCount + ' turns left';
                 if(s === arr[Math.floor(Math.random() * 4)]){
@@ -47,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () =>{
                 }
         }
         else if(event.target === e){
-            console.log(event.target, arr[Math.floor(Math.random() * 4)])            
             console.log('East')
                 p.innerText = 'You just sneaked past one of them, ssshhhh...' + '\n' + pCount + ' turns left';
                 if(e === arr[Math.floor(Math.random() * 4)]){
@@ -61,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () =>{
                 }
         }
         else if(event.target === w){
-            console.log(event.target, arr[Math.floor(Math.random() * 4)])            
             console.log('West')
                 p.innerText = 'Be on your toes, literally.' + '\n' + pCount + ' turns left';
                 if(w === arr[Math.floor(Math.random() * 4)]){
