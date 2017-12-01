@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     var v = document.querySelector('#victory-dance');
     var pCount = Number(document.getElementById('#count'))
     var pCount = 5;
+    var arr = [n,s,e,w]
     document.addEventListener('click',(event) =>{    
-        var panda = Math.floor(Math.random() * 4)
-        var array = [0,1,2,3]        
         pCount -= 1
         for(var i = 0; i < array.length; i++){ 
             var random = Math.floor(Math.random() * array[i])                
@@ -21,54 +20,58 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
 
         if(event.target === n){
-            console.log(random , panda)
+            console.log(event.target, arr[Math.floor(Math.random() * 4)])
                 p.innerText = 'Be careful, do not make any noise...' + '\n' + pCount + ' turns left';
-                if(random === panda){
+                if(n === arr[Math.floor(Math.random() * 4)]){
                     p.innerText = 'You\'ve been caught!!'
                     l.classList.remove('hide')
                 }
                 if(pCount === 0){
                     p.innerText = 'You made it out alive!!'
-                    v.classList.remove('hide-victory');                    
+                    v.classList.remove('hide-victory'); 
+                    l.classList.add('hide')                                                            
                 }
         }
         else if(event.target === s){
-            console.log(random , panda)            
+            console.log(event.target, arr[Math.floor(Math.random() * 4)])            
             console.log('South')
                 p.innerText = 'You\'re sneaking past the next cage, be careful...' + '\n' + pCount + ' turns left';
-                if(random === panda){
+                if(s === arr[Math.floor(Math.random() * 4)]){
                     p.innerText = 'You\'ve been caught!!'
                     l.classList.remove('hide')                    
                 }
                 if(pCount === 0){
                     p.innerText = 'You made it out alive!!'  
-                    v.classList.remove('hide-victory');                    
+                    v.classList.remove('hide-victory');
+                    l.classList.add('hide')                                                            
                 }
         }
         else if(event.target === e){
-            console.log(random , panda)            
+            console.log(event.target, arr[Math.floor(Math.random() * 4)])            
             console.log('East')
                 p.innerText = 'You just sneaked past one of them, ssshhhh...' + '\n' + pCount + ' turns left';
-                if(random === panda){
+                if(e === arr[Math.floor(Math.random() * 4)]){
                     p.innerText = 'You\'ve been caught!!'
                     l.classList.remove('hide')                    
                 }
                 if(pCount === 0){
                     p.innerText = 'You made it out alive!!'
-                    v.classList.remove('hide-victory');                                        
+                    v.classList.remove('hide-victory'); 
+                    l.classList.add('hide')                                                            
                 }
         }
         else if(event.target === w){
-            console.log(random , panda)            
+            console.log(event.target, arr[Math.floor(Math.random() * 4)])            
             console.log('West')
                 p.innerText = 'Be on your toes, literally.' + '\n' + pCount + ' turns left';
-                if(random === panda){
+                if(w === arr[Math.floor(Math.random() * 4)]){
                     p.innerText = 'You\'ve been caught!!'
                     l.classList.remove('hide')                    
                 }
                 if(pCount === 0){
                     p.innerText = 'You made it out alive!!'
-                    v.classList.remove('hide-victory');                                        
+                    v.classList.remove('hide-victory'); 
+                    l.classList.add('hide')                                        
                 }
         }
     })
